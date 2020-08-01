@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Demo</title>
   </head>
   <body>
-
     <h1>Hola Mundo <small>saludos</small></h1>
     <p>
       Este es un texto
     </p>
     <button type="button" id="botAlerta">Click aquí</button>
 
-
-
     <script src="node_modules/systemjs/dist/system.js"></script>
     <script>
       // set our baseURL reference path
       SystemJS.config({
-        baseURL: '/'
+        baseURL: "/",
+        //cada vez que aparesca import "jquery" lo sacara de aca
+        map: {
+          jquery: "node_modules/jquery/dist/jquery.min.js",
+        },
+        //para que las extenciones sean JS
+        defaultJExtensions: true,
       });
 
       // loads /js/main.js
-      SystemJS.import('app.js');
+      SystemJS.import("app.js");
     </script>
-
-
   </body>
 </html>
