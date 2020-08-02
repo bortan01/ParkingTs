@@ -232,22 +232,22 @@
         </div>
     </div>
 
+ <script src="../node_modules/systemjs/dist/system.js"></script>
+    <script>
+      // set our baseURL reference path
+      SystemJS.config({
+        baseURL: "/public",
+        //cada vez que aparesca import "jquery" lo sacara de aca
+        map: {
+          jquery: "../node_modules/jquery/dist/jquery.min.js",
+        },
+        //para que las extenciones sean JS
+        defaultJExtensions: true,
+      });
+
+      // loads /js/main.js
+      SystemJS.import("js/auth/authController.js");
+    </script>
 </body>
 
-<script src="../node_modules/systemjs/dist/system.js"></script>
-<script>
-  // set our baseURL reference path
-  SystemJS.config({
-    baseURL: "/public",
-    //cada vez que aparesca import "jquery" lo sacara de aca
-    map: {
-      jquery: "../node_modules/jquery/dist/jquery.min.js",
-    },
-    //para que las extenciones sean JS
-    defaultJExtensions: true,
-  });
-
-  // loads /js/main.js
-  SystemJS.import("js/auth/autenticacion.js");
-</script>
 </html>
