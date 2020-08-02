@@ -14,7 +14,9 @@
     "lite-server": "^2.2.2"
   },
   "dependencies": {
+    "@types/materialize-css": "^1.0.8",
     "jquery": "^3.5.1",
+    "materialize-css": "^1.0.0",
     "systemjs": "^0.19.41"
   }
 }

@@ -1,4 +1,5 @@
 import "jquery";
+import "materialize-css";
 console.log("dentro de auth controller");
 $(() => {
   // Evento boton inicio sesion
@@ -6,6 +7,6 @@ $(() => {
     console.log("dentro del onclick");
     $("#emailSesion").val("");
     $("#passwordSesion").val("");
-    //$("#modalSesion").modal("open");
+    $("#myModal").modal("open");
   });
 });
